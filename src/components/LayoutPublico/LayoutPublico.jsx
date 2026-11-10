@@ -38,7 +38,6 @@ export default function LayoutPublico({
         etiqueta={etiqueta}
         onCuenta={onCuenta}
       />
-      <Accesibilidad />
       <main id="contenido" tabIndex={-1}>
         {children}
       </main>

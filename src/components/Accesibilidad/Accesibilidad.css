@@ -1,13 +1,28 @@
-.accesibilidad-contenedor {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 9999;
-  font-family: "Instrument Sans", sans-serif;
+
+.accesibilidad-boton {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8C8C8C;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #222;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-/* BOTÓN PARA ABRIR */
+.accesibilidad-boton:hover {
+  background: #08060b;
+  border: 1px solid #e5e4e7;
+}
 
+.accesibilidad-boton:focus-visible {
+  outline: 3px solid #222;
+  outline-offset: 3px;
+}
 
 
 /* PANEL */
@@ -15,16 +30,17 @@
 .accesibilidad-panel {
   position: absolute;
   right: 0;
-  bottom: 65px;
+  bottom: auto;
   width: 320px;
   max-height: 75vh;
   overflow-y: auto;
   background: white;
   color: #222;
-  border: 2px solid #713bfa;
+  border: 2px solid #8C8C8C;
   border-radius: 10px;
   padding: 18px;
   box-shadow: 0 5px 25px #0003;
+  top: 52px;
 }
 
 /* ENCABEZADO */

@@ -1,10 +1,12 @@
 import { useId, useRef, useState } from "react";
+import { Accessibility } from "lucide-react"; // 1. Importas el icono de Lucide
 import Marca from "../Marca/Marca.jsx";
 import MenuMovil from "../MenuMovil/MenuMovil.jsx";
 import SelectorIdioma from "../SelectorIdioma/SelectorIdioma.jsx";
 import { interfaz } from "../../data/interfaz.js";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+
 export default function Navbar({
   nombre,
   tipo,
@@ -18,6 +20,7 @@ export default function Navbar({
   const boton = useRef(null);
   const id = useId();
   const t = interfaz[idioma];
+
   return (
     <header
       className="cabecera-home"
@@ -30,9 +33,14 @@ export default function Navbar({
     >
       <div className="ancho-home fila-cabecera">
         <Marca nombre={nombre} tipo={tipo} />
-        <button className="ingreso-movil" onClick={() => onCuenta("ingresar")}>
+
+        <button
+          className="ingreso-movil"
+          onClick={() => onCuenta("ingresar")}
+        >
           {t.ingresar}
         </button>
+
         <MenuMovil
           abierto={abierto}
           onAlternar={() => setAbierto(!abierto)}
@@ -40,6 +48,7 @@ export default function Navbar({
           botonRef={boton}
           textos={t}
         />
+
         <nav
           id={id}
           className={`menu-home ${abierto ? "abierto" : ""}`}
@@ -48,9 +57,11 @@ export default function Navbar({
           <Link to="/" onClick={() => setAbierto(false)}>
             {t.inicio}
           </Link>
+
           <Link to="/explorar" onClick={() => setAbierto(false)}>
             {etiqueta}
           </Link>
+
           <div className="acciones-home">
             {tipo === "taquilla" && (
               <a
@@ -61,17 +72,29 @@ export default function Navbar({
                 {t.buscar}
               </a>
             )}
+
             <SelectorIdioma
               idioma={idioma}
               onCambiar={onCambiarIdioma}
               etiqueta={t.idioma}
             />
+
+            {/* 2. Botón con el icono de Lucide integrando accesibilidad */}
+            <button
+              className="boton-accesibilidad"
+              aria-label={t.accesibilidad || "Accesibilidad"}
+              title="Opciones de Accesibilidad"
+            >
+              <Accessibility size={22} />
+            </button>
+
             <button
               className="ingresar-home"
               onClick={() => onCuenta("ingresar")}
             >
               {t.ingresar}
             </button>
+
             <button
               className="boton-home primario"
               onClick={() => onCuenta("registro")}
