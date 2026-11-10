@@ -1,0 +1,11 @@
+.explorar-pagina { padding-block: 48px 72px; }
+.explorar-encabezado { margin-bottom: 28px; }
+.explorar-ceja { color: var(--color-primario); font-size: 12px; font-weight: 700; letter-spacing: .12em; }
+.explorar-encabezado h1 { margin: 8px 0; font-size: clamp(30px, 5vw, 44px); }
+.explorar-encabezado > p:last-child { color: var(--color-texto-secundario, #595959); }
+.explorar-filtros { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 14px; padding: 18px; margin-bottom: 20px; border: 1px solid var(--color-borde, #dedede); border-radius: var(--radio-tarjeta, 12px); background: var(--color-superficie, #fff); }
+.explorar-filtros label { display: grid; gap: 7px; font-size: 13px; font-weight: 600; }
+.explorar-filtros input, .explorar-filtros select { width: 100%; min-width: 0; padding: 11px 12px; border: 1px solid var(--color-borde, #dedede); border-radius: 8px; background: white; color: inherit; font: inherit; }
+.explorar-contador { margin: 16px 0; color: #595959; font-size: 14px; }
+@media (max-width: 800px) { .explorar-filtros { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .explorar-pagina { padding-block: 30px 48px; } .explorar-filtros { grid-template-columns: 1fr; } }

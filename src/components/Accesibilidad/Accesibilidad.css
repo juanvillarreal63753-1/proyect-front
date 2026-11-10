@@ -1,0 +1,188 @@
+.accesibilidad-contenedor {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+/* BOTÓN PARA ABRIR */
+
+
+
+/* PANEL */
+
+.accesibilidad-panel {
+  position: absolute;
+  right: 0;
+  bottom: 65px;
+  width: 320px;
+  max-height: 75vh;
+  overflow-y: auto;
+  background: white;
+  color: #222;
+  border: 2px solid #713bfa;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 5px 25px #0003;
+}
+
+/* ENCABEZADO */
+
+.accesibilidad-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 12px;
+}
+
+.accesibilidad-encabezado h2 {
+  font-size: 19px;
+}
+
+.accesibilidad-encabezado button {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* GRUPOS */
+
+.accesibilidad-grupo {
+  padding: 14px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.accesibilidad-grupo strong {
+  font-size: 13px;
+}
+
+/* TAMAÑO DEL TEXTO */
+
+.tamano-controles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  background: #f1f1f1;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.tamano-controles button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tamano-controles button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* OPCIONES */
+
+.accesibilidad-opcion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.accesibilidad-opcion span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.accesibilidad-opcion strong {
+  font-size: 13px;
+}
+
+.accesibilidad-opcion small {
+  font-size: 11px;
+  color: #666;
+}
+
+/* INTERRUPTORES */
+
+.accesibilidad-opcion input {
+  appearance: none;
+  width: 38px;
+  height: 21px;
+  background: #aaa;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.accesibilidad-opcion input::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.2s;
+}
+
+.accesibilidad-opcion input:checked {
+  background: #713bfa;
+}
+
+.accesibilidad-opcion input:checked::before {
+  transform: translateX(17px);
+}
+
+/* DECLARACIÓN */
+
+.accesibilidad-declaracion {
+  padding: 14px 0;
+  font-size: 12px;
+}
+
+.accesibilidad-declaracion summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.accesibilidad-declaracion p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* RESTABLECER */
+
+.accesibilidad-restablecer {
+  width: 100%;
+  padding: 10px;
+  background: white;
+  border: 1px solid #713bfa;
+  color: #713bfa;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.accesibilidad-restablecer:hover {
+  background: #f2edff;
+}
+
+/* MÓVILES */
+
+@media (max-width: 400px) {
+  .accesibilidad-panel {
+    width: calc(100vw - 30px);
+    right: -10px;
+  }
+}
