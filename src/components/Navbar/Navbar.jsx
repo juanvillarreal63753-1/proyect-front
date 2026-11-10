@@ -1,11 +1,11 @@
 import { useId, useRef, useState } from "react";
-import { Accessibility } from "lucide-react"; // 1. Importas el icono de Lucide
 import Marca from "../Marca/Marca.jsx";
 import MenuMovil from "../MenuMovil/MenuMovil.jsx";
 import SelectorIdioma from "../SelectorIdioma/SelectorIdioma.jsx";
 import { interfaz } from "../../data/interfaz.js";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import Accesibilidad from "../Accesibilidad/Accesibilidad.jsx";
 
 export default function Navbar({
   nombre,
@@ -64,13 +64,7 @@ export default function Navbar({
 
           <div className="acciones-home">
             {tipo === "taquilla" && (
-              <a
-                className="buscar-cabecera"
-                href="#buscador-eventos"
-                onClick={() => setAbierto(false)}
-              >
-                {t.buscar}
-              </a>
+              <Accesibilidad />
             )}
 
             <SelectorIdioma
@@ -80,13 +74,7 @@ export default function Navbar({
             />
 
             {/* 2. Botón con el icono de Lucide integrando accesibilidad */}
-            <button
-              className="boton-accesibilidad"
-              aria-label={t.accesibilidad || "Accesibilidad"}
-              title="Opciones de Accesibilidad"
-            >
-              <Accessibility size={22} />
-            </button>
+            
 
             <button
               className="ingresar-home"

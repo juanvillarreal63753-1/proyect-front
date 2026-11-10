@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { usePreferencias } from "../../context/PreferenciasContext.jsx";
 import "./Accesibilidad.css";
+import { Accessibility } from "lucide-react";
 
 export default function Accesibilidad() {
   const { accesibilidad, cambiarAccesibilidad, restablecerAccesibilidad } =
@@ -27,7 +28,7 @@ export default function Accesibilidad() {
         aria-label="Abrir opciones de accesibilidad"
         title="Accesibilidad"
       >
-        <span aria-hidden="true">♿</span>
+        <Accessibility size={22} />
       </button>
 
       {abierto && (

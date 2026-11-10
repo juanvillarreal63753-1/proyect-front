@@ -1,15 +1,20 @@
 
+.accesibilidad-contenedor {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .accesibilidad-boton {
   width: 42px;
   height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #8C8C8C;
-  border-radius: 50%;
-  background: #FFFFFF;
-  color: #222;
-  font-size: 22px;
+  border: 1px solid #8c8c8c;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #222222;
   cursor: pointer;
   transition: background 0.2s ease;
 }
@@ -29,7 +34,7 @@
 
 .accesibilidad-panel {
   position: absolute;
-  right: 0;
+  right: 0px;
   bottom: auto;
   width: 320px;
   max-height: 75vh;
@@ -41,6 +46,7 @@
   padding: 18px;
   box-shadow: 0 5px 25px #0003;
   top: 52px;
+  z-index: 1100;
 }
 
 /* ENCABEZADO */

@@ -50,8 +50,16 @@ export async function ingresar({ correo, clave }) {
 }
 
 export async function verSesion() {
-  const resultado = await solicitar("/sesion");
-  return resultado.usuario;
+  try {
+    const resultado = await solicitar("/sesion");
+    return resultado.usuario;
+  } catch (error) {
+    if (error.estado === 401) {
+      return null;
+    }
+
+    throw error;
+  }
 }
 
 export async function cerrarSesion() {
