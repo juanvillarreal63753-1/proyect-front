@@ -202,9 +202,18 @@
 
 /* MÓVILES */
 
+
 @media (max-width: 400px) {
   .accesibilidad-panel {
-    width: calc(100vw - 30px);
-    right: -10px;
+    position: fixed;
+    top: 75px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    max-width: 380px;
+    max-height: calc(100vh - 95px);
+    overflow-y: auto;
+    box-sizing: border-box;
+    margin-left: auto;
   }
 }

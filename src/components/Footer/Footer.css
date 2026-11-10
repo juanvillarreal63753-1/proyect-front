@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 900;
   background: var(--superficie);
-  padding: 12px 0 10px;
+  padding: 6px 0;
 }
 .columnas-pie {
   display: grid;
@@ -44,15 +44,16 @@
 }
 .pie-creditos {
   border-top: 1px solid var(--borde);
-  margin-top: 32px;
-  padding-top: 20px;
+  margin-top: 10px;
+  padding-top: 6px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 8px;
   color: var(--suave);
-  font-size: 12px;
+  font-size: 10px;
 }
+
 .pie-creditos .cookies > .cookies-boton {
   background: transparent;
   color: var(--suave);
@@ -136,4 +137,41 @@
 
 .pie-creditos .enlace-home {
   color: var(--suave) !important;
+}
+.columnas-pie {
+  gap: 10px;
+}
+
+.columnas-pie p {
+  margin-top: 2px;
+  font-size: 11px;
+}
+
+.columnas-pie h3 {
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+
+.columnas-pie > div > a:not(.marca-home),
+.columnas-pie button {
+  margin-block: 2px;
+  font-size: 11px;
+}
+
+@media (max-width: 640px) {
+  .pie-home {
+    padding: 6px 0;
+  }
+
+  .pie-creditos {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    font-size: 9px;
+  }
+
+  .pie-creditos .cookies > .cookies-boton {
+    padding: 3px 0;
+  }
 }
